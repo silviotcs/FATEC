@@ -1,4 +1,4 @@
-/* Projeto para calcular BTUs de ar condicionado nas principais regiıes brasileiras - Alunos FATEC - Faculdade de Tecnologia de Bauru */
+/* Projeto para calcular BTUs de ar condicionado nas principais regi√µes brasileiras - Alunos FATEC - Faculdade de Tecnologia de Bauru */
 
 /* bibliotecas*/
 #include <stdio.h>
@@ -7,17 +7,16 @@
 #include <ctype.h>
 #include <conio.h>
 
-
-/* FunÁ„o principal */
+/* Fun√ß√£o principal */
 int main()
 {
   
     char opp = -1; /* Initialize opp to -1 to enter the infinite loop */
-    int people, number_dev, number_lamp, number_win, number_curt; /* Vari·veis para armazenar a quantidade de pessoas, dispositivos eletrÙnicos, l‚mpadas LED, janelas e cortinas */
-    int h_a; /* Vari·vel para armazenar a opÁ„o de residÍncia ou comÈrcio */
-    char y_n_slab, y_n_win; /* Vari·vel para armazenar a opÁ„o de laje ou n„o e quantidade de janelas */
-    float footage, total_footage; /* Vari·vel para armazenar o tamanho do imÛvel e o tamanho total do imÛvel*/
-    float final_calculation; /* Vari·vel para armazenar o c·lculo final*/
+    int people, number_dev, number_lamp, number_win, number_curt; /* Vari√°veis para armazenar a quantidade de pessoas, dispositivos eletr√¥nicos, l√¢mpadas LED, janelas e cortinas */
+    int h_a; /* Vari√°vel para armazenar a op√ß√£o de resid√™ncia ou com√©rcio */
+    char y_n_slab, y_n_win; /* Vari√°vel para armazenar a op√ß√£o de laje ou n√£o e quantidade de janelas */
+    float footage, total_footage; /* Vari√°vel para armazenar o tamanho do im√≥vel e o tamanho total do im√≥vel*/
+    float final_calculation; /* Vari√°vel para armazenar o c√°lculo final*/
     bool negativeCheck = 0;
 
 
@@ -38,9 +37,9 @@ int main()
 
             printf("North and Northeast of Brazil\n");
             printf("\nOption 1 (Residential House) \nOption 2 (Commercial Apartment/Office)\nType the option number: ");
-            scanf("%i", &h_a); /* Armazena a opÁ„o de residÍncia ou comÈrcio */
-            printf("Have slab (Y/N)? "); /* Pergunta se o imÛvel possui laje ou n„o */
-            scanf(" %c", &y_n_slab); /* Armazena a opÁ„o de laje ou n„o */
+            scanf("%i", &h_a); /* Armazena a op√ß√£o de resid√™ncia ou com√©rcio */
+            printf("Have slab (Y/N)? "); /* Pergunta se o im√≥vel possui laje ou n√£o */
+            scanf(" %c", &y_n_slab); /* Armazena a op√ß√£o de laje ou n√£o */
             y_n_slab = toupper(y_n_slab);
 
             if(y_n_slab == 'Y') {
@@ -92,7 +91,7 @@ int main()
 				}
 			}while(negativeCheck);
 
-            /* C·lculo final North and Northeast of Brazil*/
+            /* C√°lculo final North and Northeast of Brazil*/
             final_calculation = 600 + (people * 100) + (number_dev * 100) + (number_lamp * 70) + ((y_n_win == 'Y' || y_n_win == 'y') ? 0 : 50 * (number_win - number_curt));
 
             if(y_n_slab == 'Y') {
@@ -165,7 +164,7 @@ int main()
 				}
 			}while(negativeCheck);
 
-            /* C·lculo final Midwest, South and Southeast of Brazil*/
+            /* C√°lculo final Midwest, South and Southeast of Brazil*/
             final_calculation = 400 + (people * 100) + (number_dev * 100) + (number_lamp * 70) + ((y_n_win == 'Y' || y_n_win == 'y') ? 0 : 50 * (number_win - number_curt)); 
 
             if(y_n_slab == 'Y') {
@@ -196,7 +195,6 @@ int main()
     return 0;
 }
 
-/*Se a propriedade tiver uma laje, o resultado È exibido como est·. Se a propriedade n„o tiver uma laje, o resultado È multiplicado pela metragem quadrada total da propriedade dividida por 100.*/
 
 /*What is a BTU?
 The British Thermal Unit, or BTU, is an energy unit. It is approximately the energy needed to heat one pound of water by 1 degree Fahrenheit.
@@ -209,36 +207,4 @@ BTU can also be used pragmatically as a point of reference for the amount of hea
 appliance, the greater the heating capacity. As for air conditioning in homes, even though ACs are meant to cool homes, BTUs on the technical
 label refer to how much heat the air conditioner can remove from their respective surrounding air. */
 
-/*
-int people, number_dev, number_lamp, number_win, number_curt, footage, total_footage;{
 
-if(people, number_dev, number_lamp, number_win, number_curt, footage, total_footage >= 1)
-    }else{
-        people, number_dev, number_lamp, number_win, number_curt, footage, total_footage = -999;
-    
-    printf("\nOnly positive numbers, please press any key to return to menu...");
-    getch();
-    return opp;
-}*/
-
-
-
-
-/* #include <stdio.h>
-
-int ler_numero_maior_que_1() {
-    int num;
-    printf("Digite um numero maior que 1: ");
-    scanf("%d", &num);
-    if (num <= 1) {
-        printf("Erro: numero invalido.\n");
-        return ler_numero_maior_que_1();
-    }
-    return num;
-}
-
-int main() {
-    int num_maior_que_1 = ler_numero_maior_que_1();
-    printf("O numero digitado foi: %d\n", num_maior_que_1);
-    return 0;
-}*/
