@@ -23,7 +23,7 @@ int main()
     while(opp != 0) {
         system("cls");
 		
-		printf("-------------------------------------------------------------------\n");
+	printf("-------------------------------------------------------------------\n");
         printf("-Air Conditioner System (British Thermal Unit - A/C BTU Calculaor)-\n"); /* Calculador de Sistema de ar-condicionado em BTUs */
         printf("\n-1 - Option 1 (North and Northeast of Brazil)                     -"); /* Norte e Nordeste */
         printf("\n-2 - Option 2 (Midwest, South and Southeast of Brazil)            -"); /* Centro-Oeste, Sul e Sudeste */
