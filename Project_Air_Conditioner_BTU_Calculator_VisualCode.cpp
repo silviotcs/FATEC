@@ -103,7 +103,7 @@ int main()
             printf("Inform number of curtains: ");
             scanf("%i", &numb_curt);
 
-            final_calculation = 600 + (people * 100) + (numb_dev * 100) + (numb_lamp * 70) + ((y_n_win == 'Y' || y_n_win == 'y') ? 0 : 50 * (numb_win - numb_curt));
+            final_calculation = 400 + (people * 100) + (numb_dev * 100) + (numb_lamp * 70) + ((y_n_win == 'Y' || y_n_win == 'y') ? 0 : 50 * (numb_win - numb_curt));
 
             if(y_n_slab == 'Y' || y_n_slab == 'y') {
                 printf("BTUs: %.2f", final_calculation);
